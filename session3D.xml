@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <NEKTAR>
     <EXPANSIONS>
-        <E COMPOSITE="C[272,273]" NUMMODES="4" TYPE="MODIFIED" FIELDS="u,v,w" />
-        <E COMPOSITE="C[272,273]" NUMMODES="3" TYPE="MODIFIEDQUADPLUS1" FIELDS="p" />
+        <E COMPOSITE="C[272,273]" NUMMODES="3" TYPE="MODIFIED" FIELDS="u,v,w" />
+        <E COMPOSITE="C[272,273]" NUMMODES="2" TYPE="MODIFIEDQUADPLUS1" FIELDS="p" />
     </EXPANSIONS>
     <CONDITIONS>
         <SOLVERINFO>
@@ -26,7 +26,7 @@
         </GLOBALSYSSOLNINFO>
 
     <PARAMETERS>
-        <P> TimeStep      =    1.0e-4                                       </P> <!-- Time step -->   
+        <P> TimeStep      =    1.0e-3                                       </P> <!-- Time step -->   
         <P> NumSteps      =    10000                                        </P> <!-- Number of step -->
         <P> IO_CheckSteps =    5000                                        </P> <!-- Number of step to write the intermediate results -->
         <P> IO_InfoSteps  =    100                                        </P> <!-- Number of step to print information -->
