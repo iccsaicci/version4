@@ -43,7 +43,7 @@
         <PARAMETERS>
             <P>TimeStep = 1.0e-3</P>
             <!-- Time step -->
-            <P>NumSteps = 10000</P>
+            <P>NumSteps = 20000</P>
             <!-- Number of step -->
             <P>IO_CheckSteps = 5000</P>
             <!-- Number of step to write the intermediate results -->
@@ -82,10 +82,7 @@
         </BOUNDARYCONDITIONS>
         <!-- Specify the initial condition -->
         <FUNCTION NAME="InitialConditions">
-            <E VAR="u" VALUE="U0" />
-            <E VAR="v" VALUE="V0" />
-            <E VAR="w" VALUE="W0" />
-            <E VAR="p" VALUE="0.0" />
+            <F VAR="u,v,w,p" FILE="new3D4_2.rst" />
         </FUNCTION>
     </CONDITIONS>
     <COLLECTIONS>
