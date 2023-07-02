@@ -30,14 +30,20 @@
             <I PROPERTY="Projection" VALUE="Galerkin" />
             <I PROPERTY="TimeIntegrationMethod" VALUE="IMEXOrder2" />
             <I PROPERTY="GJPStabilisation" VALUE="SemiImplicit" />
-            <I PROPERTY="SpectralVanishingViscosity" VALUE="DGKernel" />
+            <!--I PROPERTY="SpectralVanishingViscosity" VALUE="DGKernel" /-->
         </SOLVERINFO>
         <GLOBALSYSSOLNINFO>
             <V VAR="u,v,w">
-                <I PROPERTY="GlobalSysSoln" VALUE="XxtMultiLevelStaticCond" />
+                <!--I PROPERTY="GlobalSysSoln"              VALUE="XxtStaticCond" /-->
+                <I PROPERTY="GlobalSysSoln" VALUE="IterativeStaticCond" />
+                <I PROPERTY="Preconditioner" VALUE="LowEnergyBlock" />
+                <I PROPERTY="IterativeSolverTolerance" VALUE="1e-9" />
             </V>
             <V VAR="p">
-                <I PROPERTY="GlobalSysSoln" VALUE="XxtMultiLevelStaticCond" />
+                <!--I PROPERTY="GlobalSysSoln"              VALUE="XxtStaticCond" /-->
+                <I PROPERTY="GlobalSysSoln" VALUE="IterativeStaticCond" />
+                <I PROPERTY="Preconditioner" VALUE="LowEnergyBlock" />
+                <I PROPERTY="IterativeSolverTolerance" VALUE="1e-7" />
             </V>
         </GLOBALSYSSOLNINFO>
         <PARAMETERS>
@@ -118,8 +124,8 @@
         <NekMeshCommandLine>new3D4.msh new3D4.xml</NekMeshCommandLine>
     </Metadata>
     <EXPANSIONS>
-        <E COMPOSITE="C[272,273]" NUMMODES="3" TYPE="MODIFIED" FIELDS="u,v,w" />
-        <E COMPOSITE="C[272,273]" NUMMODES="2" TYPE="MODIFIEDQUADPLUS1" FIELDS="p" />
+        <E COMPOSITE="C[272,273]" NUMMODES="4" TYPE="MODIFIED" FIELDS="u,v,w" />
+        <E COMPOSITE="C[272,273]" NUMMODES="3" TYPE="MODIFIEDQUADPLUS1" FIELDS="p" />
     </EXPANSIONS>
     <FILTERS>
         <FILTER TYPE="HistoryPoints">

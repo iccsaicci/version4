@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <NEKTAR>
     <EXPANSIONS>
-        <E COMPOSITE="C[272,273]" NUMMODES="4" TYPE="MODIFIED" FIELDS="u,v,w" />
-        <E COMPOSITE="C[272,273]" NUMMODES="3" TYPE="MODIFIEDQUADPLUS1" FIELDS="p" />
+        <E COMPOSITE="C[272,273]" NUMMODES="3" TYPE="MODIFIED" FIELDS="u,v,w" />
+        <E COMPOSITE="C[272,273]" NUMMODES="2" TYPE="MODIFIEDQUADPLUS1" FIELDS="p" />
     </EXPANSIONS>
     <CONDITIONS>
         <SOLVERINFO>
@@ -13,22 +13,16 @@
             <I PROPERTY="Projection"        VALUE="Galerkin" />
             <I PROPERTY="TimeIntegrationMethod" VALUE="IMEXOrder2" />
             <I PROPERTY="GJPStabilisation" VALUE="SemiImplicit" />
-            <!--I PROPERTY="SpectralVanishingViscosity" VALUE="DGKernel" /-->
+            <I PROPERTY="SpectralVanishingViscosity" VALUE="DGKernel" />
         </SOLVERINFO>
 	
 	<GLOBALSYSSOLNINFO>
 	    <V VAR="u,v,w">
-                <!--I PROPERTY="GlobalSysSoln"              VALUE="XxtStaticCond" /-->
-                <I PROPERTY="GlobalSysSoln"           VALUE="IterativeStaticCond" />
-                <I PROPERTY="Preconditioner"          VALUE="LowEnergyBlock" />
-                <I PROPERTY="IterativeSolverTolerance" VALUE="1e-9"/>
-            </V>
+	        <I PROPERTY="GlobalSysSoln"	       VALUE="XxtMultiLevelStaticCond" />
+	    </V>
             <V VAR="p">
-                <!--I PROPERTY="GlobalSysSoln"              VALUE="XxtStaticCond" /-->
-                <I PROPERTY="GlobalSysSoln"   VALUE="IterativeStaticCond" />
-                <I PROPERTY="Preconditioner"          VALUE="LowEnergyBlock" />
-                <I PROPERTY="IterativeSolverTolerance" VALUE="1e-7"/>
-            </V>
+                <I PROPERTY="GlobalSysSoln"	VALUE="XxtMultiLevelStaticCond" />
+	    </V>
         </GLOBALSYSSOLNINFO>
 
     <PARAMETERS>

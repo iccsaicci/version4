@@ -6,13 +6,13 @@
             <GitSHA1>f286f809cfeb26cb73828c90a689a048898971d2</GitSHA1>
             <Hostname>euston</Hostname>
             <NektarVersion>5.3.0</NektarVersion>
-            <Timestamp>27-Jun-2023 14:12:10</Timestamp>
+            <Timestamp>27-Jun-2023 18:33:26</Timestamp>
         </Provenance>
-        <ChkFileNum>2</ChkFileNum>
+        <ChkFileNum>7</ChkFileNum>
         <Kinvis>0.0062893081761006293</Kinvis>
         <SessionName0>new3D4.opt</SessionName0>
         <SessionName1>new3D4_xml/P0000000.xml</SessionName1>
-        <Time>9.999999999999897</Time>
+        <Time>30.000000000013682</Time>
         <TimeStep>0.001</TimeStep>
     </Metadata>
     <Partition FileName="P0000000.fld">160-169,180-189,620-639,1350-1359,1410-1419,1860-1869,2190-2199,2820-2829,2870-2879,3230-3239,3290-3299,3710-3719,3750-3759,3840-3849,4060-4079,4270-4279,4560-4569,4630-4639,4800-4809,4980-4989,5140-5149,5180-5189,5210-5219,5530-5539,5690-5699,5730-5739,5950-5959,6270-6279,6310-6319,6360-6369,6380-6389,6430-6439,6650-6659,6710-6719,6740-6779,6860-6899,6940-6949,7010-7089,7550-7619,8080-8149,8610-8679,14100-14159,14530-14589,14960-15019,15390-15449</Partition>
